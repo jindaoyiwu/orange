@@ -4,10 +4,11 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/flipped-aurora/gin-vue-admin/server/docs"
-	"github.com/flipped-aurora/gin-vue-admin/server/global"
-	"github.com/flipped-aurora/gin-vue-admin/server/middleware"
-	"github.com/flipped-aurora/gin-vue-admin/server/router"
+	"server/docs"
+	"server/global"
+	"server/middleware"
+	"server/router"
+
 	"github.com/gin-gonic/gin"
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
@@ -104,6 +105,7 @@ func Routers() *gin.Engine {
 		systemRouter.InitAuthorityBtnRouterRouter(PrivateGroup)             // 按钮权限管理
 		systemRouter.InitSysExportTemplateRouter(PrivateGroup, PublicGroup) // 导出模板
 		systemRouter.InitSysParamsRouter(PrivateGroup, PublicGroup)         // 参数管理
+		systemRouter.InitAreaRouter(PrivateGroup, PublicGroup)              // 区域管理
 		exampleRouter.InitCustomerRouter(PrivateGroup)                      // 客户路由
 		exampleRouter.InitFileUploadAndDownloadRouter(PrivateGroup)         // 文件上传下载功能路由
 		exampleRouter.InitAttachmentCategoryRouterRouter(PrivateGroup)      // 文件上传下载分类

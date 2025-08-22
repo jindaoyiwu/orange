@@ -5,9 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/flipped-aurora/gin-vue-admin/server/global"
-	"github.com/flipped-aurora/gin-vue-admin/server/model/system"
-	"github.com/flipped-aurora/gin-vue-admin/server/service"
+	"server/global"
+	"server/model/system"
+	"server/service"
 	"github.com/mark3labs/mcp-go/mcp"
 	"go.uber.org/zap"
 	"gorm.io/gorm"

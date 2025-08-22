@@ -1,6 +1,6 @@
 package system
 
-import api "github.com/flipped-aurora/gin-vue-admin/server/api/v1"
+import api "server/api/v1"
 
 type RouterGroup struct {
 	ApiRouter
@@ -20,6 +20,7 @@ type RouterGroup struct {
 	SysExportTemplateRouter
 	SysParamsRouter
 	SysVersionRouter
+	AreaRouter
 }
 
 var (
@@ -43,4 +44,5 @@ var (
 	autoCodeTemplateApi = api.ApiGroupApp.SystemApiGroup.AutoCodeTemplateApi
 	exportTemplateApi   = api.ApiGroupApp.SystemApiGroup.SysExportTemplateApi
 	sysVersionApi       = api.ApiGroupApp.SystemApiGroup.SysVersionApi
+	areaApi             = api.ApiGroupApp.SystemApiGroup.AreaApi
 )

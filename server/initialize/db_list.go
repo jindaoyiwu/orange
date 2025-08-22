@@ -1,8 +1,8 @@
 package initialize
 
 import (
-	"github.com/flipped-aurora/gin-vue-admin/server/config"
-	"github.com/flipped-aurora/gin-vue-admin/server/global"
+	"server/config"
+	"server/global"
 	"gorm.io/gorm"
 )
 

@@ -1,6 +1,6 @@
 package system
 
-import "github.com/flipped-aurora/gin-vue-admin/server/service"
+import "server/service"
 
 type ApiGroup struct {
 	DBApi
@@ -23,6 +23,7 @@ type ApiGroup struct {
 	AutoCodeTemplateApi
 	SysParamsApi
 	SysVersionApi
+	AreaApi
 }
 
 var (
@@ -46,4 +47,5 @@ var (
 	autoCodeHistoryService  = service.ServiceGroupApp.SystemServiceGroup.AutoCodeHistory
 	autoCodeTemplateService = service.ServiceGroupApp.SystemServiceGroup.AutoCodeTemplate
 	sysVersionService       = service.ServiceGroupApp.SystemServiceGroup.SysVersionService
+	areaService             = service.ServiceGroupApp.SystemServiceGroup.AreaService
 )

@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"github.com/flipped-aurora/gin-vue-admin/server/global"
-	"github.com/flipped-aurora/gin-vue-admin/server/model/system"
+	"server/global"
+	"server/model/system"
 	"github.com/mark3labs/mcp-go/mcp"
 	"gorm.io/gorm"
 )

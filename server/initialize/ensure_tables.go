@@ -2,11 +2,12 @@ package initialize
 
 import (
 	"context"
+	"server/model/example"
+	sysModel "server/model/system"
+	"server/plugin/announcement/model"
+	"server/service/system"
+
 	adapter "github.com/casbin/gorm-adapter/v3"
-	"github.com/flipped-aurora/gin-vue-admin/server/model/example"
-	sysModel "github.com/flipped-aurora/gin-vue-admin/server/model/system"
-	"github.com/flipped-aurora/gin-vue-admin/server/plugin/announcement/model"
-	"github.com/flipped-aurora/gin-vue-admin/server/service/system"
 	"gorm.io/gorm"
 )
 
@@ -54,6 +55,7 @@ func (e *ensureTables) MigrateTable(ctx context.Context) (context.Context, error
 		sysModel.JoinTemplate{},
 		sysModel.SysParams{},
 		sysModel.SysVersion{},
+		sysModel.SysArea{},
 		adapter.CasbinRule{},
 
 		example.ExaFile{},
@@ -94,6 +96,7 @@ func (e *ensureTables) TableCreated(ctx context.Context) bool {
 		sysModel.SysExportTemplate{},
 		sysModel.Condition{},
 		sysModel.JoinTemplate{},
+		sysModel.SysArea{},
 
 		adapter.CasbinRule{},
 

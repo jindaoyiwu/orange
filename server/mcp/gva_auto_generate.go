@@ -10,12 +10,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/flipped-aurora/gin-vue-admin/server/global"
-	common "github.com/flipped-aurora/gin-vue-admin/server/model/common/request"
-	model "github.com/flipped-aurora/gin-vue-admin/server/model/system"
-	"github.com/flipped-aurora/gin-vue-admin/server/model/system/request"
-	"github.com/flipped-aurora/gin-vue-admin/server/service"
-	systemService "github.com/flipped-aurora/gin-vue-admin/server/service/system"
+	"server/global"
+	common "server/model/common/request"
+	model "server/model/system"
+	"server/model/system/request"
+	"server/service"
+	systemService "server/service/system"
 	"github.com/mark3labs/mcp-go/mcp"
 	"gorm.io/gorm"
 )
